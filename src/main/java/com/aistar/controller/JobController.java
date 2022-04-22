@@ -79,5 +79,9 @@ public class JobController {
         return "redirect:/customer/center/3";
     }
 
+     @RequestMapping("/submit")
+     public  String recommend(){
 
+        return "";
+     }
 }

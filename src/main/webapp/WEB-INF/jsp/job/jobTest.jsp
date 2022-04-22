@@ -7,6 +7,7 @@
 
     <script src="${pageContext.request.contextPath}/static/dist/jquery/jquery-3.4.1.min.js"></script>
     <script src="${pageContext.request.contextPath}/static/dist/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/jobTest.js"></script>
     <style>.header {
         width: 100%;
         height: 82px;
@@ -19,7 +20,7 @@
     .center {
         max-width: 800px;
         font-size: 20px;
-        color: greenyellow;
+        color: rgba(175, 47, 255, 0.99);
         margin: 0 auto;
     }
 
@@ -35,7 +36,7 @@
 
     body {
         position: relative;
-        /*background-image: url("img/宿舍.jpg");*/
+        background-image: url("${pageContext.request.contextPath}/images/jkf_imgs/goRigth.svg");
     }
 
     .p1 {
@@ -63,7 +64,7 @@
 <div class="header"><p><a href=" ">职业测评</a></p></div>
 <p class="p1">分配测试表单</p>
 <div class="center">
-    <form action="${pageContext.request.contextPath}/testServlet" method="post">
+    <form action="/job/submit" method="post">
         <div class="form-group">
             <label>1、你的性别是什么？</label>
             <input type="radio" name="gender" value="男" checked="checked"/>男
