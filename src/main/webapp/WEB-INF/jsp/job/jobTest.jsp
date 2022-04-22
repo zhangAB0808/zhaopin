@@ -54,39 +54,12 @@
         border-radius: 30px;
     }
 
-    a {
+    a{
         text-decoration: none;
     }</style>
 </head>
 <body>
 <jsp:include page="../navigate/navigate.jsp"/>
-<%--<h3>职业测评</h3>--%>
-<%--<form action="">--%>
-<%--    <ul>--%>
-<%--        <li>--%>
-<%--            <label class="label_text">--%>
-<%--                1.您期望的工作环境是怎样的？</label><br>--%>
-<%--            <label class="radio-inline">--%>
-<%--                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">与人打交道--%>
-<%--            </label>--%>
-<%--            <label class="radio-inline">--%>
-<%--                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">自主开发--%>
-<%--            </label>--%>
-<%--            <label class="radio-inline">--%>
-<%--                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">协同工作--%>
-<%--            </label>--%>
-<%--        </li>--%>
-
-<%--        <li></li>--%>
-<%--        <li></li>--%>
-<%--        <li></li>--%>
-<%--        <li></li>--%>
-<%--        <li></li>--%>
-<%--        <li></li>--%>
-<%--        <li></li>--%>
-<%--        <li></li>--%>
-<%--    </ul>--%>
-<%--</form>--%>
 <div class="header"><p><a href=" ">职业测评</a></p></div>
 <p class="p1">分配测试表单</p>
 <div class="center">
