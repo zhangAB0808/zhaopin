@@ -12,6 +12,7 @@
             font-size: 20px;
             margin: 100px auto;
             color: #677cb1;
+            margin-bottom: 50px;
         }
         h2{
             color: lightcoral;
@@ -27,7 +28,8 @@
                 if (i > 5) {
                     clearInterval(interval);
                     document.getElementById("msg").innerText = "";
-                    document.getElementById("p").innerHTML = "<h2>你的职业分析结果为：</h2>${rs}";
+                    document.getElementById("p").innerHTML = "<h2>你的职业分析结果为：</h2>${rs}<h2>你的职业推荐为： <a href='/job/15'>html5</a> <a href='/job/18'>游戏UI设计</a> ";
+
                 } else {
                     document.getElementById("msg").innerText = "正在加载中" + s;
                     s += ".";
