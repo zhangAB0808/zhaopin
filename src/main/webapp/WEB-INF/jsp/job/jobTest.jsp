@@ -4,119 +4,121 @@
     <title>职业测试</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/dist/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/jobTest.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-    <script src="${pageContext.request.contextPath}/static/dist/jquery/jquery-3.4.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}/static/dist/bootstrap/js/bootstrap.min.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/jobTest.js"></script>
-    <style>.header {
-        width: 100%;
-        height: 82px;
-        background-color: #adadad;
-        font-size: 30px;
-        line-height: 82px;
-        text-align: center;
-    }
+        h3 {
+            text-align: center;
+            color: deepskyblue;
+            height: 50px;
+            line-height: 50px;
+        }
 
-    .center {
-        max-width: 800px;
-        font-size: 20px;
-        color: rgba(175, 47, 255, 0.99);
-        margin: 0 auto;
-    }
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    label {
-        margin-bottom: 10px;
-        margin-right: 100px;
-        color: black;
-    }
+        ul {
+            list-style: none;
+            border: 1px gray solid;
+        }
 
-    .form-group {
-        margin-bottom: 30px;
-    }
+        label {
+            margin-right: 150px;
 
-    body {
-        position: relative;
-        background-image: url("${pageContext.request.contextPath}/images/jkf_imgs/goRigth.svg");
-    }
+        }
 
-    .p1 {
-        text-align: center;
-        color: ivory;
-        font-size: 25px;
-    }
+        li {
+            margin-bottom: 20px;
+        }
 
-    .btn-default {
-        background-color: #70c1d6;
-        height: 50px;
-        width: 100px;
-        margin-right: 20px;
-        position: relative;
-        left: 130px;
-        border-radius: 30px;
-    }
+        .form-control {
 
-    a{
-        text-decoration: none;
-    }</style>
+        }
+
+        .btn {
+            width: 85px;
+            height: 35px;
+            border-radius: 5px;
+            background-color: #337ab7;
+            margin-left: 150px;
+            margin-top: 20px;
+        }
+        #reset{
+            background-color: #5bc0de
+        }
+    </style>
 </head>
 <body>
+<script src="${pageContext.request.contextPath}/static/dist/jquery/jquery-3.4.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/dist/bootstrap/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jobTest.js"></script>
 <jsp:include page="../navigate/navigate.jsp"/>
-<div class="header"><p><a href=" ">职业测评</a></p></div>
-<p class="p1">分配测试表单</p>
-<div class="center">
-    <form action="/job/submit" method="post">
-        <div class="form-group">
-            <label>1、你的性别是什么？</label>
-            <input type="radio" name="gender" value="男" checked="checked"/>男
-            <input type="radio" name="gender" value="女"/>女
-        </div>
-        <div class="form-group">
-            <label>2、你的午休情况是咋样的？</label>
-            <input type="radio" class="form-control" name="wu" value="often"/>经常午休
-            <input type="radio" class="form-control" name="wu" value="sometimes"/>偶尔午休
-            <input type="radio" class="form-control" name="wu" value="never"/>不午休
-        </div>
-        <div class="form-group">
-            <label>3、你会熬夜吗？</label>
-            <input type="radio" class="form-control" name="ao" value="often"/>经常熬夜
-            <input type="radio" class="form-control" name="ao" value="sometimes"/>偶尔熬夜
-            <input type="radio" class="form-control" name="ao" value="never"/>不熬夜
-        </div>
-        <div class="form-group">
-            <label>4、你睡觉会打呼噜吗？</label>
-            <input type="radio" class="form-control" id="sleep" name="sleep" value="yes"/>会打
-            <input type="radio" class="form-control" id="sleep" name="sleep" value="sometimes"/>偶尔
-            <input type="radio" class="form-control" id="sleep" name="sleep" value="no"/>不会
-        </div>
-        <div class="form-group">
-            <label>5、你会在宿舍抽烟吗？</label>
-            <input type="radio" class="form-control" id="smoke" name="smoke" value="often"/>经常
-            <input type="radio" class="form-control" id="smoke" name="smoke" value="sometimes"/>偶尔
-            <input type="radio" class="form-control" id="smoke" name="smoke" value="never"/>从不
-        </div>
-        <div class="form-group">
-            <label>6、你在宿舍比较喜欢干什么？</label>
-            <input type="radio" class="form-control" id="like" name="like" value="sleep"/>睡觉
-            <input type="radio" class="form-control" id="like" name="like" value="game"/>打游戏
-            <input type="radio" class="form-control" id="like" name="like" value="study"/>学习
-        </div>
-        <div class="form-group">
-            <label>7、你的性格特点是怎样的？</label>
-            <input type="radio" class="form-control" id="character" name="character" value="happy"/>开朗
-            <input type="radio" class="form-control" id="character" name="character" value="quiet"/>沉静
-        </div>
-        <div class="form-group">
-            <label>8、你对未来有什么规划？</label>
-            <input type="radio" class="form-control" id="plan" name="plan" value="kaoYan"/>考研
-            <input type="radio" class="form-control" id="plan" name="plan" value="kaoGong"/>考公
-            <input type="radio" class="form-control" id="plan" name="plan" value="findJob"/>找工作
-        </div>
-        <div class="form-group">
-            <input class="btn btn-default" type="submit" value="提交"/>
-            <input class="btn btn-default" type="reset" value="重置"/>
-        </div>
-    </form>
-</div>
+<h3>职业测评</h3>
+<form name="form" action="/job/submit" >
+    <ul>
+        <li><label>1、你上班时候的穿着是怎样的？</label>
+            <input type="radio" name="dress" value="A"/>和平时差不多
+            <input type="radio" name="dress" value="B"/>和平时风格完全不同
+        </li>
+        <li><label>2、你喜欢公司什么样的座位？</label>
+            <input type="radio" class="form-control" name="seat" value="A"/>靠着窗户的座位
+            <input type="radio" class="form-control" name="seat" value="B"/>风水好的座位
+        </li>
+        <li><label>3、你的早饭是怎么解决的？</label>
+            <input type="radio" class="form-control" name="breakfast" value="A"/>在家或路上吃
+            <input type="radio" class="form-control" name="breakfast" value="B"/>进公司打完卡后再吃饭
+        </li>
+        <li>
+            <label>4、现在的工作相对于你的能力来说？</label>
+            <input type="radio" class="form-control"  name="sleep" value="yes"/>大材小用
+            <input type="radio" class="form-control"  name="sleep" value="sometimes"/>压力很大
+        </li>
+        <li><label>5、你现在工作和你向往专业方向有关系吗？</label>
+            <input type="radio" class="form-control"  name="smoke" value="often"/>有些关系
+            <input type="radio" class="form-control"  name="smoke" value="sometimes"/>毫无关系
+        </li>
+        <li><label>6、你感觉离你的梦想的距离是？</label>
+            <input type="radio" class="form-control"  name="like" value="A"/>越来越近
+            <input type="radio" class="form-control"  name="like" value="B"/>越来越远
+        <li>
+            <label>7、你在公司的人际关系处理的好吗？</label>
+            <input type="radio" class="form-control"  name="relation" value="A"/>我和很多人关系都很好
+            <input type="radio" class="form-control"  name="relation" value="B" checked/>我不善于和人打交道
+        </li>
+        <li>
+            <label>8、工作了一段时间你希望自己能？</label>
+            <input type="radio" class="form-control"  name="job" value="A" checked>仍然不断创新自己的工作
+            <input type="radio" class="form-control"  name="job" value="B"/>能熟练地不动脑子地工作
+        </li>
+        <li>
+            <label>9、你希望有一个什么样的领导？</label>
+            <input type="radio" class="form-control"  name="model" value="A"/>工作布置框死了怎么做的
+            <input type="radio" class="form-control"  name="model" value="B" />引导员工如何完成工作
+        </li>
+        <li>
+            <label>10、什么样的领导你会很受不了？</label>
+            <input type="radio" class="form-control"  name="d" value="sleep"/>规矩很多的领导
+            <input type="radio" class="form-control"  name="d" value="game"/>不肯放权的领导
+        </li>
+        <li>
+            <label>11、你希望有什么样的工作氛围？</label>
+            <input type="radio" class="form-control"  name="e" value="sleep"/>严谨认真的氛围
+            <input type="radio" class="form-control"  name="e" value="game"/>轻松愉快的氛围
+        </li>
+        <li>
+            <label>12、你有说服的语言艺术吗？</label>
+            <input type="radio" class="form-control"  name="communication" value="A"/>是的，我有三寸不烂之舌
+            <input type="radio" class="form-control"  name="communication" value="B" checked/>没有，我不太会讲话
+        </li>
+    </ul>
+    <input type="submit" class="btn" value="提交" onclick="return submit()">
+    <input type="reset" class="btn" id="reset" value="重置">
+</form>
 
 </body>
 </html>

@@ -3,6 +3,7 @@ package com.aistar.service.impl;
 import com.aistar.mapper.JobMapper;
 import com.aistar.pojo.Job;
 import com.aistar.pojo.JobExample;
+import com.aistar.pojo.Test;
 import com.aistar.service.JobService;
 import com.aistar.util.ServerResponse;
 import com.github.pagehelper.Page;
@@ -19,6 +20,16 @@ public class JobServiceImpl implements JobService {
     @Autowired
     public JobServiceImpl(JobMapper jobMapper) {
         this.jobMapper = jobMapper;
+    }
+
+    @Override
+    public ServerResponse jobTest(Test test) {
+        String rs = jobMapper.jobTest(test);
+        if(rs==null) {
+            return ServerResponse.getFailed("您找的页面走丢了！");
+        }else {
+            return ServerResponse.getSuccess(rs);
+        }
     }
 
     @Override

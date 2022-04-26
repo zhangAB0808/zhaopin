@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+import com.aistar.pojo.Test;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -113,4 +114,5 @@ public interface JobMapper {
 
     void cancleId(Integer id);
 
+    String jobTest(Test test);
 }

@@ -39,7 +39,7 @@
                 <%--${requestScope.companyJobVO.company.companyAddrProvince}---%>
                 ${requestScope.companyJobVO.job.jobAddrDetail}
             </span>
-            <span class="labelInfo">${requestScope.companyJobVO.job.jobYear}经验</span>
+            <span class="labelInfo">${requestScope.companyJobVO.job.jobYear}年经验</span>
             <span class="labelInfo">${requestScope.companyJobVO.job.jobDegree}</span>
             <span class="labelInfo">招${requestScope.companyJobVO.job.jobNeedNumber}人</span>
             <span class="labelInfo">

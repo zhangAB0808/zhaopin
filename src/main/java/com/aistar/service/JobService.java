@@ -1,10 +1,13 @@
 package com.aistar.service;
 
+import com.aistar.pojo.Test;
 import com.aistar.util.ServerResponse;
 
 
 public interface JobService {
-      void updateId(Integer id);
+     ServerResponse jobTest(Test test);
+
+    void updateId(Integer id);
 
 
     ServerResponse getByPage(Integer pageNum, Integer pageSize);

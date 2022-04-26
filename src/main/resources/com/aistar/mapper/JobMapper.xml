@@ -530,5 +530,8 @@
         </where>
         ORDER BY job_publish_time desc
     </select>
+    <select id="jobTest" resultType="java.lang.String">
+        select result from test where relation=#{relation} and job=#{job} and communication=#{communication}
+    </select>
 
 </mapper>

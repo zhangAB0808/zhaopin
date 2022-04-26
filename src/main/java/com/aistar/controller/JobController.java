@@ -1,5 +1,7 @@
 package com.aistar.controller;
 
+import com.aistar.mapper.JobMapper;
+import com.aistar.pojo.Test;
 import com.aistar.pojoVO.CompanyJobVO;
 import com.aistar.service.JobService;
 import com.aistar.serviceVO.CompanyJobVOService;
@@ -80,8 +82,9 @@ public class JobController {
     }
 
      @RequestMapping("/submit")
-     public  String recommend(){
-
-        return "";
+     public  String recommend(Test test,Model model){
+         ServerResponse rs = jobService.jobTest(test);
+         model.addAttribute("rs",rs.getData());
+        return "/job/wait";
      }
 }
